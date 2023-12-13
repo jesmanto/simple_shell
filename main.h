@@ -19,7 +19,7 @@ int execute_env(void);
 int launch_env(void);
 void print_error(const char *cmd_line, const char *message, int line_number);
 int search_command_in_path(const char *command, char *command_path);
-void handle_exit_command(const char *command_line);
+void exit_cmd(const char *cmd_line);
 char *_strdup(const char *str);
 size_t _strlen(const char *str);
 int _strncmp(const char *s1, const char *s2, size_t n);

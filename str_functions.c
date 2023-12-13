@@ -86,3 +86,27 @@ char *_strtok(char *str, const char *delimiter)
 	last_str = NULL;
 	return (tok_start);
 }
+
+/**
+ * _strdup - coustom strduo funtion
+ * @str: string
+ * Return: the new string
+ */
+
+char *_strdup(const char *str)
+{
+	size_t len = _strlen(str);
+	size_t i = 0;
+	char *new_str = (char *)malloc(len + 1);
+
+	if (str == NULL)
+		return (NULL);
+
+	if (new_str == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
+		new_str[i] = str[i];
+
+	return (new_str);
+}
